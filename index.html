@@ -346,7 +346,6 @@
     </div>
 
 
-    <!-- Contact -->
     <div class="section nav-menu-section" id="contact">
         <div class="container sub-container">
             <div class="section-tilte">
@@ -368,24 +367,25 @@
                                     <div class="app-contact">CONTACT INFO : +62 851-3475-1313</div>
                                 </div>
                                 <div class="screen-body-item">
-                                    <div class="app-form">
+                                    <form id="contact-form" class="app-form">
                                         <div class="app-form-group">
-                                            <input class="app-form-control" placeholder="NAME" value="">
+                                            <input name="user_name" class="app-form-control" placeholder="NAME" />
                                         </div>
                                         <div class="app-form-group">
-                                            <input class="app-form-control" placeholder="EMAIL">
+                                            <input name="user_email" class="app-form-control" placeholder="EMAIL" />
                                         </div>
                                         <div class="app-form-group">
-                                            <input class="app-form-control" placeholder="CONTACT NO">
+                                            <input name="contact_no" class="app-form-control"
+                                                placeholder="CONTACT NO" />
                                         </div>
                                         <div class="app-form-group message">
-                                            <input class="app-form-control" placeholder="MESSAGE">
+                                            <input name="message" class="app-form-control" placeholder="MESSAGE" />
                                         </div>
                                         <div class="app-form-group buttons">
-                                            <button class="app-form-button">CANCEL</button>
-                                            <button class="app-form-button">SEND</button>
+                                            <button type="reset" class="app-form-button">CANCEL</button>
+                                            <button type="submit" class="app-form-button">SEND</button>
                                         </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>

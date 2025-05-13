@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-    --heu: 217;
+    /* --heu: 217;
     --sat: 85%;
     --light: 74%;
 
@@ -25,8 +25,32 @@
 
     --scrolbar-color: hsl(var(--heu) 26% 12%);
     --scrollbar-thumb: hsl(var(--heu) var(--sat) var(--light));
-    --scrollbar-thumb-hver: hsl(var(--heu) var(--sat) calc(var(--light) -7%));
+    --scrollbar-thumb-hver: hsl(var(--heu) var(--sat) calc(var(--light) -7%)); */
+    --heu: 217;
+    --sat: 50%;
+    --light: 85%;
 
+    --primary-color: hsl(var(--heu) var(--sat) var(--light));
+    --white-color: hsl(var(--heu) 40% 97%);
+    --dark-color: hsl(var(--heu) 15% 20%);
+
+    --color-01: var(--primary-color);
+    --color-02: hsl(var(--heu) 40% 97%);
+    --color-03: hsl(var(--heu) 15% 20%);
+    --color-04: hsl(var(--heu) 10% 50%);
+    --color-05: hsl(var(--heu) 15% 20%);
+
+    --body-color: hsl(var(--heu) 20% 95%);
+    --hover-color: hsl(var(--heu) var(--sat) calc(var(--light) - 10%));
+
+    --btn-nav-bg: hsl(var(--heu) 30% 85% / 0.6);
+    --card-bg: linear-gradient(120deg, hsl(var(--heu) 34% 90% / 0.15), hsl(var(--heu) 54% 90% / 0.05));
+    --modal-backdrop-bg: hsl(var(--heu) 54% 90% / 0.1);
+    --footer-bg: linear-gradient(360deg, hsl(var(--heu) 54% 90% / 0.15), hsl(var(--heu) 54% 90% / 0.1));
+
+    --scrolbar-color: hsl(var(--heu) 15% 90%);
+    --scrollbar-thumb: var(--primary-color);
+    --scrollbar-thumb-hver: var(--hover-color);
 
     --body-font-family: "Inter", serif;
 
@@ -737,8 +761,9 @@ body {
 }
 
 .portfolio-card {
-    background: #fff;
+    color: var(--color-01);
     border-radius: 10px;
+    border: 1px solid var(--primary-color);
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
@@ -783,26 +808,7 @@ body {
     margin: 0;
 }
 
-@media (max-width: 1024px) {
-    .portfolio-container {
-        grid-template-columns: repeat(3, 1fr);
-        justify-content: center;
-    }
-}
 
-@media (max-width: 768px) {
-    .portfolio-container {
-        grid-template-columns: repeat(2, 1fr);
-        justify-content: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .portfolio-container {
-        grid-template-columns: repeat(1, 1fr);
-        justify-content: center;
-    }
-}
 
 .container-con {
     flex: 0 1 700px;
@@ -928,107 +934,7 @@ body {
     color: var(--hover-color);
 }
 
-@media (max-width: 1200px) {
-    .container {
-        max-width: 95%;
-        padding: 0 15px;
-    }
 
-    .section-content {
-        flex-direction: column;
-        column-gap: 40px;
-    }
-
-    .about-img,
-    .about-details {
-        width: 100%;
-    }
-
-    .avatar-container {
-        flex-direction: column;
-        row-gap: 30px;
-    }
-
-    .avatar-img {
-        width: 300px;
-        height: 300px;
-    }
-
-    .home-social {
-        display: none;
-    }
-}
-
-@media (max-width: 768px) {
-    :root {
-        --h1-font-size: 2.2rem;
-        --h3-font-size: 1.5rem;
-    }
-
-    .header {
-        padding: 15px 0;
-    }
-
-    .btn-nav .menu {
-        position: fixed;
-        bottom: -100%;
-        left: 0;
-        width: 100%;
-        background: var(--body-color);
-        flex-direction: column;
-        padding: 30px 0;
-        border-radius: 20px 20px 0 0;
-        transition: bottom 0.3s ease;
-        z-index: 9999;
-    }
-
-    .btn-nav .menu.mobile-menu-open {
-        bottom: 0;
-    }
-
-    .btn-nav .menu li {
-        margin: 10px 0;
-    }
-
-    .btn-nav .menu li a {
-        flex-direction: row;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .btn-nav .menu li a span {
-        position: relative;
-        transform: translateY(0);
-        opacity: 1;
-        background: transparent;
-        color: var(--color-02);
-    }
-
-    .btn-nav .menu li a i {
-        margin-right: 10px;
-    }
-
-    .menu-show-btn {
-        opacity: 1;
-        bottom: 20px;
-    }
-
-    .portfolio-container {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .screen-body {
-        flex-direction: column;
-    }
-
-    .screen-body-item {
-        padding: 20px;
-    }
-
-    .app-title {
-        font-size: 20px;
-    }
-}
 
 body {
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -1050,23 +956,338 @@ body {
     }
 }
 
-@media (max-width: 480px) {
 
-    .main-btn,
-    .app-form-button {
+@media (max-width: 1200px) {
+    .container {
+        max-width: 95%;
+        padding: 0 15px;
+    }
+
+    .section-content {
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    .about-img,
+    .about-details {
+        width: 100%;
+    }
+
+    .about-img {
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-img img {
+        width: 60%;
+        height: auto;
+    }
+
+    .avatar-container {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .avatar-img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .portfolio-container {
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: -450px;
+    }
+
+    .icon-lng {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+}
+
+/* Tablet Responsive Settings */
+@media (max-width: 768px) {
+    :root {
+        --h1-font-size: 2.2rem;
+        --h3-font-size: 1.5rem;
+        --h4-font-size: 1.3rem;
+    }
+
+    .header {
+        padding: 15px 0;
+    }
+
+    .section-tilte {
+        margin-bottom: -120px;
+    }
+
+    .btn-nav {
+        bottom: 20px;
+    }
+
+    .btn-nav .menu {
+        padding: 12px 20px;
+        column-gap: 15px;
+    }
+
+    .btn-nav .menu li a i {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: -400px;
+        gap: 15px;
+    }
+
+    .portfolio-tabs {
+        margin-top: -200px;
+        column-gap: 15px;
+        margin-bottom: 60px;
+    }
+
+    .portfolio-tabs .tab-btn {
+        font-size: var(--small-font-size);
+        padding: 8px 0;
+    }
+
+    .portfolio-tabs .tab-btn.active {
+        padding: 8px 15px;
+    }
+
+    .about-details {
+        text-align: center;
+    }
+
+    .about-btn {
+        justify-content: center;
+    }
+
+    .screen-body {
+        flex-direction: column;
+    }
+
+    .screen-body-item {
+        padding: 20px;
+    }
+
+    .app-title {
+        font-size: 20px;
+    }
+
+    .icon-lng {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 200px;
+        gap: 25px;
+    }
+
+    .about-tilte {
+        margin-top: 40px;
+    }
+
+    .home-social {
+        display: none;
+    }
+}
+
+/* Mobile Responsive Settings */
+@media (max-width: 576px) {
+    :root {
+        --h1-font-size: 1.8rem;
+        --h3-font-size: 1.3rem;
+        --h4-font-size: 1.1rem;
+        --base-font-size: 1rem;
+    }
+
+    .logo a {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .main-btn {
         padding: 12px 20px;
         font-size: 0.9rem;
     }
 
-    .avatar-img {
-        width: 250px;
-        height: 250px;
+    .header-btn {
+        column-gap: 15px;
     }
+
+    .lets-talk-btn {
+        display: none;
+    }
+
+    .lest-talk-icon {
+        display: block;
+    }
+
+    .portfolio-container {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: -350px;
+    }
+
+    .about-img img {
+        width: 80%;
+        height: auto;
+    }
+
+    .avatar-img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .home-container {
+        height: auto;
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+
+    .section-tilte {
+        margin-bottom: -100px;
+    }
+
+    .btn-nav {
+        width: 100%;
+        bottom: 0;
+    }
+
+    .btn-nav .menu {
+        width: 90%;
+        border-radius: 50px;
+        padding: 10px 15px;
+        column-gap: 10px;
+    }
+
+    .btn-nav .menu li a i {
+        font-size: 1rem;
+        padding: 6px;
+    }
+
+    .btn-nav .menu li a span {
+        transform: translateY(-40px);
+    }
+
+    .menu-show-btn {
+        width: 60px;
+        height: 40px;
+    }
+
+    .menu-show-btn .bar-01,
+    .menu-show-btn .bar-02 {
+        width: 30px;
+    }
+
+    .icon-lng {
+        margin-top: 150px;
+    }
+
+    .pro-card {
+        padding: 20px 15px;
+    }
+
+    .pro-card span {
+        font-size: 2rem;
+    }
+
+    .home-scroll-btn {
+        display: none;
+    }
+
+    .about-btn {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio-tabs {
+        flex-direction: column;
+        row-gap: 10px;
+        margin-bottom: 40px;
+        margin-top: -150px;
+    }
+
+    .portfolio-tabs .tab-btn {
+        width: 80%;
+        text-align: center;
+    }
+
+    .portfolio-tabs .tab-btn.active {
+        width: 80%;
+    }
+
+    /* Mobile Menu Specific */
+    .menu-show-btn {
+        opacity: 1;
+        bottom: 20px;
+    }
+
+    .btn-nav .menu.mobile-menu-open {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+        padding: 10px 15px;
+    }
+}
+
+/* Fix for navigation menu on smaller screens */
+@media (max-width: 480px) {
+    .btn-nav .menu {
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+    .btn-nav .menu li a i {
+        font-size: 0.9rem;
+        padding: 5px;
+    }
+
+    .btn-nav .menu li a span {
+        display: none;
+    }
+
+    .about-img img {
+        width: 100%;
+    }
+
+    .app-form-group.buttons {
+        text-align: center;
+    }
+
+    .app-form-button {
+        margin: 0 5px;
+    }
+
+    .pro-list {
+        grid-template-columns: 1fr;
+    }
+
+    .avatar-info .name {
+        font-size: var(--h2-font-size);
+    }
+
+    .avatar-info .kemampuan {
+        font-size: var(--small-font-size);
+    }
+}
+
+/* Fix for scroll animations */
+.nav-menu-section {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Properly apply mobile menu toggle */
+.mobile-menu-open {
+    display: flex !important;
+    bottom: 0 !important;
 }
 
 .nav-menu-section {
     opacity: 0;
-    
+
     transform: translateY(20px);
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
